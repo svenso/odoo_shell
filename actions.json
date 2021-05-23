@@ -1,0 +1,253 @@
+{
+  "pos.order": [
+    "refund"
+  ],
+  "product.category": [
+    "get_product_multiline_description_sale",
+    "toggle_active"
+  ],
+  "ir.translation": [
+    "finish"
+  ],
+  "sale.advance.payment.inv": [
+    "create_invoices"
+  ],
+  "sale.order": [
+    "validate_taxes_on_sales_order",
+    "update_prices",
+    "preview_sale_order",
+    "payment_action_capture",
+    "payment_action_void",
+    "get_portal_last_transaction"
+  ],
+  "hr.recruitment.source": [
+    "create_alias",
+    "create_employee_from_applicant",
+    "reset_applicant",
+    "toggle_active"
+  ],
+  "base.language.import": [
+    "import_lang"
+  ],
+  "ir.cron": [
+    "method_direct_trigger"
+  ],
+  "account.payment.method": [
+    "mark_as_sent",
+    "unmark_as_sent"
+  ],
+  "hr.employee": [
+    "toggle_active",
+    "generate_random_barcode"
+  ],
+  "stock.picking.type": [
+    "get_action_picking_tree_late",
+    "get_action_picking_tree_backorder",
+    "get_action_picking_tree_waiting",
+    "get_action_picking_tree_ready",
+    "get_stock_picking_action_picking_type",
+    "do_print_picking",
+    "do_unreserve"
+  ],
+  "ir.module.category": [
+    "get_transforms",
+    "update_list"
+  ],
+  "base.module.upgrade": [
+    "get_module_list",
+    "upgrade_module_cancel",
+    "upgrade_module",
+    "config"
+  ],
+  "subject": [
+    "convert_links"
+  ],
+  "res.partner": [
+    "mail_partner_format"
+  ],
+  "format.address.mixin": [
+    "create_company",
+    "main_partner"
+  ],
+  "forum.post.reason": [
+    "get_tags_first_char",
+    "go_to_website",
+    "post_notification",
+    "reopen",
+    "validate",
+    "refuse",
+    "flag",
+    "convert_answer_to_comment",
+    "go_to_website"
+  ],
+  "badge_name": [
+    "check_granting"
+  ],
+  "reset.view.arch.wizard": [
+    "clear_cache",
+    "final_check",
+    "update_view_fields"
+  ],
+  "account.common.report": [
+    "check_report"
+  ],
+  "base.import.module": [
+    "import_module"
+  ],
+  "crm.lead": [
+    "toggle_active",
+    "get_rainbowman_message",
+    "redirect_lead_opportunity_view"
+  ],
+  "stock.change.product.qty": [
+    "change_product_qty"
+  ],
+  "account.bank.statement": [
+    "validate"
+  ],
+  "report.all.channels.sales": [
+    "get_main_request"
+  ],
+  "res.groups": [
+    "toggle_active",
+    "context_get",
+    "preference_save",
+    "preference_change_password",
+    "run_check"
+  ],
+  "project.project": [
+    "toggle_favorite",
+    "rating_get_partner_id"
+  ],
+  "stock.return.picking.line": [
+    "create_returns"
+  ],
+  "validate.account.move": [
+    "validate_move"
+  ],
+  "base.language.install": [
+    "lang_install",
+    "reload"
+  ],
+  "repair.tags": [
+    "print_repair_order"
+  ],
+  "stock.inventory": [
+    "post_inventory"
+  ],
+  "event.track": [
+    "get_backend_menu_id"
+  ],
+  "stock.location": [
+    "toggle_active"
+  ],
+  "res.lang": [
+    "get_available",
+    "get_sorted",
+    "get_installed",
+    "toggle_active"
+  ],
+  "survey.user_input": [
+    "get_start_url",
+    "get_print_url"
+  ],
+  "purchase.requisition.type": [
+    "create_supplier_info"
+  ],
+  "hr.expense": [
+    "paid_expense_sheets",
+    "reset_expense_sheets"
+  ],
+  "product.ribbon": [
+    "clear_cache"
+  ],
+  "website.published.mixin": [
+    "get_website_meta"
+  ],
+  "mail.template": [
+    "unlink_action",
+    "create_action"
+  ],
+  "sale.order.option": [
+    "update_prices"
+  ],
+  "fleet.vehicle.assignation.log": [
+    "return_action_to_open"
+  ],
+  "account.tax": [
+    "invoice_generate_xml"
+  ],
+  "product.template": [
+    "has_dynamic_attributes",
+    "get_single_product_variant"
+  ],
+  "purchase.order": [
+    "print_quotation",
+    "get_update_url"
+  ],
+  "account.tax.report": [
+    "get_lines_in_hierarchy",
+    "validate_country_id"
+  ],
+  "account.unreconcile": [
+    "trans_unrec"
+  ],
+  "l10n_eu_service.wizard": [
+    "generate_eu_service"
+  ],
+  "website": [
+    "create_and_redirect_to_theme",
+    "get_suggested_controllers",
+    "get_base_url",
+    "get_base_url",
+    "get_website_meta"
+  ],
+  "ir.mail_server": [
+    "fetch_mail",
+    "test_smtp_connection"
+  ],
+  "res.company": [
+    "cache_restart",
+    "write_company_and_print_report"
+  ],
+  "ir.ui.view": [
+    "filter_duplicate",
+    "redirect_to_page_manager"
+  ],
+  "base.module.update": [
+    "update_module"
+  ],
+  "stock.warehouse": [
+    "get_rules_dict"
+  ],
+  "registration.editor": [
+    "get_registration_data"
+  ],
+  "hr.job": [
+    "close_dialog"
+  ],
+  "mrp.workcenter.productivity.loss.type": [
+    "unblock"
+  ],
+  "rating.rating": [
+    "reset"
+  ],
+  "lunch.product.report": [
+    "compute_concurrency_field"
+  ],
+  "membership.invoice": [
+    "membership_invoice"
+  ],
+  "stock.quant.package": [
+    "unpack"
+  ],
+  "account.move": [
+    "update_lines_tax_exigibility",
+    "post",
+    "preview_invoice",
+    "generate_qr_code",
+    "reconcile",
+    "remove_move_reconcile",
+    "create_analytic_lines"
+  ]
+}
