@@ -273,15 +273,16 @@ function _fOdooGenerateMethod {
 			[TabComplete('Get-Odoo$($niceName) -Search `$wordToComplete', "id")][parameter(Position = 0, ParameterSetName='GetById')][int[]]`$TargetId
 			,[parameter(Position = 0, ParameterSetName='GetBySearch')][string[]]`$Search
 			,[parameter()][Enum$($niceName)[]]`$Fields
+			,[parameter()][string[]]`$FieldsFull
 			,`$Connection
 		)
 		
 		$map
 			
 		if (`$PsCmdlet.ParameterSetName -eq 'GetById') {
-			_fOdooGetItem -Connection `$Connection -Model $Model -Ids `$TargetId -Fields (`$Fields ?? @() | %{ `$map[`$_.ToString()] ?? `$_ })
+			_fOdooGetItem -Connection `$Connection -Model $Model -Ids `$TargetId -Fields (`$Fields ?? `$FieldsFull ?? @() | %{ `$map[`$_.ToString()] ?? `$_ })
 		} else {
-			_fOdooGetSearchItems -Connection `$Connection -Model $Model	-Fields (`$Fields ?? @() | %{ `$map[`$_.ToString()] ?? `$_ }) -Search `$Search
+			_fOdooGetSearchItems -Connection `$Connection -Model $Model	-Fields (`$Fields ?? `$FieldsFull ?? @() | %{ `$map[`$_.ToString()] ?? `$_ }) -Search `$Search
 		}
 		
 	}
@@ -294,6 +295,7 @@ function _fOdooGenerateMethod {
 		param(
 			[parameter(Position = 0)][int]`$TargetId
 			$(foreach ($prop in $fields.PSObject.Properties.Name){ if (!$fields.$prop.readonly) { ", [$($typemap[$fields.$prop.type] ?? $fields.$prop.type)]`$$($fields.$prop.nice_name)`r`n" }})
+			,[parameter()][hashtable]`$AdditionalFields
 			,`$Connection
 		)
 		process {
@@ -305,6 +307,9 @@ function _fOdooGenerateMethod {
 					`$ops.Add(`$map[`$key], `$PSBoundParameters[`$key]);
 				}
 			}
+			foreach (`$key in `$AdditionalFields.Keys) {
+				`$ops.Add(`$key, `$AdditionalFields[`$key]);
+			}
 			
 			_fOdooSetItem -Connection `$Connection -Id `$TargetId -Model $Model -Data `$ops
 		}
@@ -315,6 +320,7 @@ function _fOdooGenerateMethod {
 		param(
 			[parameter(DontShow)]`$dummy
 			$(foreach ($prop in $fields.PSObject.Properties.Name){ if (!$fields.$prop.readonly) { ", `$$($fields.$prop.nice_name)`r`n" }})
+			,[parameter()][hashtable]`$AdditionalFields
 			,`$Connection
 		)
 		process {
@@ -325,6 +331,9 @@ function _fOdooGenerateMethod {
 				if (`$map[`$key] -ne `$null) {
 					`$ops.Add(`$map[`$key], `$PSBoundParameters[`$key]);
 				}
+			}
+			foreach (`$key in `$AdditionalFields.Keys) {
+				`$ops.Add(`$key, `$AdditionalFields[`$key]);
 			}
 			_fOdooAddItem -Connection `$Connection -Model $Model -Data `$ops
 		}

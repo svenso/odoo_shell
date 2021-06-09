@@ -178,7 +178,8 @@
     "invoice_generate_xml"
   ],
   "product.template": [
-    "has_dynamic_attributes",
+    "action_archive",
+	"has_dynamic_attributes",
     "get_single_product_variant"
   ],
   "purchase.order": [
