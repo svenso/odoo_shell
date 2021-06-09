@@ -15,9 +15,9 @@ Class TabComplete : Attribute {
 $typemap = @{
 	"integer"="int";
 	"boolean"="bool";
-	"many2one"="object[]";
+	"many2one"="object";
 	"many2many"="object[]";
-	"one2many"="object[]";
+	"one2many"="object";
 	"binary"="string";
 	"char"="string";
 	"float"="float";
