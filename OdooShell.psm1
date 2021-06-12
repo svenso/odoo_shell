@@ -28,6 +28,7 @@ $typemap = @{
 	"size"="int";
 	"on_delete"="object";
 	"relation"="object";
+	"html"="string";
 }
 
 function Set-OdooConnectionInfo {
